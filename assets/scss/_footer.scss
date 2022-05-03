@@ -1,0 +1,57 @@
+// footer -----------------------------------------------
+.container_footer {
+    margin-top: 80px;
+    position: relative !important;
+    width: 100%;
+    background-color: #222;
+    .copyRight {
+        margin: 0 auto;
+        text-align: center;
+        width: 90%;
+        padding: 14px 0;
+        p {
+            font-size: 14px;
+            // font-weight: 300;
+            // font-family: 'Kanit', sans-serif;
+            font-family: 'Kanit', sans-serif;
+            // font-family: 'Prompt', sans-serif;
+            color: $colorWhiteHover + 20;
+        }
+    }
+}
+
+// Height navbar scroll
+@media only screen and (min-height: 0px) and (max-height: 560px) {
+    .side-bar {
+        overflow: scroll !important;
+    }
+}
+
+// Default media responsive
+@media only screen and (min-width: 280px) and (max-width: 420px) {
+    // Phone
+    // Footer    
+    .container_footer {
+        .copyRight {
+            width: 90%;
+            padding: 8px 0 !important;
+            p {
+                font-size: 8px !important;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 420px) and (max-width: 780px) {
+    // Tablet Ipad
+    // Footer    
+    .container_footer {
+        .copyRight {
+            width: 90%;
+            padding: 12px 0 !important;
+            p {
+                font-size: 10px !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,377 @@
+.areaRegister {
+    font-family: 'Kanit', sans-serif;
+    padding: 0 20px;
+    padding-bottom: 60px;
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: $colorWhite;
+    border-radius: 20px;
+    input,
+    select {
+        font-family: 'kanit', sans-serif;
+    }
+    input {
+        padding: 5px 10px;
+    &:placeholder-shown {
+            border-top: 2px solid rgba(0, 0, 0, 0.226) !important;
+            border-left: 2px solid rgba(0, 0, 0, 0.226) !important;
+            border-right: 2px solid rgba(0, 0, 0, 0.226) !important;
+            border-bottom: 2px solid rgba(200, 0, 0, 0.6) !important;
+        }
+    }
+    select {
+        padding: 5px 20px;
+    }
+    .header {
+        margin-top: 140px;
+        .title {
+            text-align: center;
+            p {
+                padding-top: 100px !important;
+                padding-bottom: 40px !important;
+                font-weight: 300;
+                font-size: 34px;
+            }
+        }
+        .areaCheckStatus {
+            margin-top: 60px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            p {
+                margin-right: -80px;
+                color: $colorOrangeWhite - 80;
+                font-size: 14px;
+            }
+        }
+    }
+    .session {
+        margin-top: -80px;
+        flex-direction: column;
+        justify-content: center;
+        // align-items: center;
+        .titleSection {
+            margin-top: 140px;
+            position: relative;
+            left: 20px;
+            padding: 10px 0;
+            border-radius: 10px;
+            p {
+                color: $colorOrange - 60;
+                font-size: 24px;
+                font-weight: 300;
+            }
+        }
+        .areaInput {
+            margin-top: 34px;
+            margin-left: 80px;
+            max-width: 1000px;
+            display: flex;
+            flex-direction: row;
+            // justify-content: space-between;
+            justify-content: left;
+            flex-wrap: wrap;
+            row-gap: 2rem;
+            column-gap: 1.6rem;
+            .question {
+                p {
+                    font-weight: 300;
+                    margin-left: 6px;
+                    margin-bottom: 6px;
+                }
+                input {
+                    width: 200px;
+                }
+            }
+        }
+    }
+    .areabutton {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 80px;
+        .btnRegis {
+            margin-left: 20px;
+            button {
+                font-family: 'Prompt', sans-serif;
+                padding: 6px 10px 6px 10px;
+                cursor: pointer;
+                border: 0px;
+                border-radius: 5px;
+                color: green;
+                border: 2px solid green;
+                border-radius: 5px;
+                font-size: 16px;
+                transition: 0.2s ease-in-out;
+                &:hover {
+                    color: $colorWhite;
+                    background-color: green;
+                }
+            }
+        }
+        .btnReset {
+            margin-left: 20px;
+            ;
+            button {
+                font-family: 'Prompt', sans-serif;
+                padding: 6px 10px 6px 10px;
+                cursor: pointer;
+                border-radius: 5px;
+                color: $colorOrangeWhite - 40;
+                border: 2px solid $colorOrangeWhite - 40;
+                font-size: 16px;
+                transition: 0.2s ease-in-out;
+                &:hover {
+                    color: $colorWhite;
+                    background-color: $colorOrangeWhite - 40;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 420px) {
+    .areabutton {
+        .btnRegis {
+            button {
+                padding: 8.5px 6px 8.5px 6px !important;
+                font-size: 14px !important;
+            }
+        }
+        .btnReset {
+            button {
+                padding: 8px 6px 8px 6px !important;
+                font-size: 14px !important;
+            }
+        }
+    }
+    .areaRegister {
+        padding: 0 20px !important;
+        padding-bottom: 60px !important;
+        margin: 0 auto !important;
+        max-width: 600px !important;
+        border-radius: 20px !important;
+
+        input,
+        select {
+            font-family: 'kanit', sans-serif !important;
+        }
+        input {
+            padding: 5px 10px !important;
+        }
+        select {
+            padding: 5px 20px !important;
+            width: 220px !important;
+        }
+        .header {
+            margin-top: 120px !important;
+            .title {
+                text-align: center !important;
+                p {
+                    padding-top: 40px !important;
+                    font-weight: 300 !important;
+                    font-size: 34px !important;
+                }
+            }
+            .areaCheckStatus {
+
+                margin-top: 60px !important;
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                
+                .description {
+                    margin-top: 40px;
+                }
+                
+                p {
+                    line-height: 1.5;
+                    width: 200px;
+                    margin-left: -240px !important;
+                    color: $colorOrangeWhite - 80 !important;
+                    font-size: 14px !important;
+                }
+            }
+        }
+        .session {
+            margin-top: -80px !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            // align-items: center !important;
+            .titleSection {
+                margin-top: 140px !important;
+                position: relative !important;
+                left: 20px !important;
+                padding: 10px 0 !important;
+                border-radius: 10px !important;
+                p {
+                    display: flex;
+                    flex-direction: column;
+                    color: $colorOrange - 60 !important;
+                    font-size: 20px !important;
+                    font-weight: 300 !important;
+                    margin-left: -14px;
+                }
+                span {
+                    margin-top: 20px;
+                }
+            }
+            .areaInput {
+                margin-top: 34px !important;
+                margin-left: 40px !important;
+                max-width: 1000px !important;
+                display: flex !important;
+                flex-direction: row !important;
+                // justify-content: space-between !important;
+                justify-content: left !important;
+                flex-wrap: wrap !important;
+                row-gap: 2rem !important;
+                column-gap: 1.6rem !important;
+                .question {
+                    p {
+                        font-weight: 300 !important;
+                        margin-left: 6px !important;
+                        margin-bottom: 6px !important;
+                    }
+                    input {
+                        width: 200px !important;
+                    }
+                }
+            }
+        }
+        .areabutton {
+            margin-top: 80px !important;
+            text-align: center !important;
+            input:nth-child(1) {
+                cursor: pointer !important;
+                width: 120px !important;
+                margin-right: 10px !important;
+                cursor: pointer !important;
+                color: green !important;
+                border: 2px solid green !important;
+                &:hover {
+                    color: $colorWhite !important;
+                    background-color: green !important;
+                }
+            }
+            input:nth-child(2) {
+                color: $colorOrangeWhite - 20 !important;
+                border: 2px solid $colorOrangeWhite !important;
+                cursor: pointer !important;
+                &:hover {
+                    color: $colorWhite !important;
+                    background-color: $colorOrangeWhite - 10 !important;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 420px) and (max-width: 1300px) {
+    .areaRegister {
+        padding: 0 20px !important;
+        padding-bottom: 60px !important;
+        margin: 0 auto !important;
+        max-width: 600px !important;
+        border-radius: 20px !important;
+        input,
+        select {
+            font-family: 'kanit', sans-serif !important;
+        }
+        input {
+            padding: 5px 10px !important;
+        }
+        select {
+            padding: 5px 20px !important;
+        }
+        .header {
+            margin-top: 120px !important;
+            .title {
+                text-align: center !important;
+                p {
+                    padding-top: 40px !important;
+                    font-weight: 300 !important;
+                    font-size: 34px !important;
+                }
+            }
+            .areaCheckStatus {
+                margin-top: 60px !important;
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                p {
+                    line-height: 1.5;
+                    width: 200px;
+                    margin-left: -240px !important;
+                    color: $colorOrangeWhite - 80 !important;
+                    font-size: 14px !important;
+                }
+            }
+        }
+        .session {
+            margin-top: -80px !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            // align-items: center !important;
+            .titleSection {
+                margin-top: 140px !important;
+                position: relative !important;
+                left: 20px !important;
+                padding: 10px 0 !important;
+                border-radius: 10px !important;
+                p {
+                    color: $colorOrange - 60 !important;
+                    font-size: 24px !important;
+                    font-weight: 300 !important;
+                }
+            }
+            .areaInput {
+                margin-top: 34px !important;
+                margin-left: 80px !important;
+                max-width: 1000px !important;
+                display: flex !important;
+                flex-direction: row !important;
+                // justify-content: space-between !important;
+                justify-content: left !important;
+                flex-wrap: wrap !important;
+                row-gap: 2rem !important;
+                column-gap: 1.6rem !important;
+                .question {
+                    p {
+                        font-weight: 300 !important;
+                        margin-left: 6px !important;
+                        margin-bottom: 6px !important;
+                    }
+                    input {
+                        width: 140px !important;
+                    }
+                }
+            }
+        }
+        .areabutton {
+            margin-top: 80px !important;
+            text-align: center !important;
+            input:nth-child(1) {
+                cursor: pointer !important;
+                width: 120px !important;
+                margin-right: 10px !important;
+                cursor: pointer !important;
+                color: green !important;
+                border: 2px solid green !important;
+                &:hover {
+                    color: $colorWhite !important;
+                    background-color: green !important;
+                }
+            }
+            input:nth-child(2) {
+                color: $colorOrangeWhite - 20 !important;
+                border: 2px solid $colorOrangeWhite !important;
+                cursor: pointer !important;
+                &:hover {
+                    color: $colorWhite !important;
+                    background-color: $colorOrangeWhite - 10 !important;
+                }
+            }
+        }
+    }
+}

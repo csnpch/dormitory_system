@@ -1,0 +1,72 @@
+.container_forgot {
+    font-family: 'Kanit', sans-serif;
+    margin: 0 auto;
+    margin-top: 150px;
+    margin-bottom: 20vh;
+    padding: 60px 80px 40px 80px;
+    border-radius: 20px;
+    background-color: $colorWhite;
+    max-width: 200px;
+
+    .title {
+        font-size: 22px;
+    }
+
+    .areaInputCheck {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        p {
+            margin: 20px 0 4px 0;
+        }
+        input[type="text"] {
+            font-family: 'Kanit', sans-serif;
+            padding: 4px 8px;
+            width: 180px;
+        }
+        .submit {
+            text-align: center;
+            margin-top: 24px;
+            cursor: pointer;
+            width: 180px;
+            height: 32px;
+            color: white;
+            border: 0px;
+            background-color: $colorOrange;
+            border-radius: 5px;
+            transition: 0.2s;
+            &:hover {
+                background-color: $colorOrange - 30;
+            }
+        }
+        .date {
+            font-size: 12px;
+            padding: 3px 30px;
+        }
+        
+        
+
+    }.result {
+        margin-top: 40px;
+        line-height: 2;
+        text-align: center;
+        p:nth-child(1) {
+            font-size: 18px;
+        }
+        p:nth-child(2) {
+            color: red - 40;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 10px;            
+        }
+        a {
+            font-size: 14px;
+            font-weight: 400;
+            color: blue - 20;
+            text-decoration: 2px underline !important;
+        }
+    }
+    
+}

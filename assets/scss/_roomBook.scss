@@ -1,0 +1,228 @@
+.ColorStatusIsFull {
+    color: yellow !important;
+}
+
+.areaBook {
+    font-family: 'Kanit', sans-serif;
+    margin: 0 auto;
+    margin-top: 140px;
+    max-width: 1200px;
+    min-height: 100vh;
+    background: $colorWhite;
+    border-radius: 50px;
+    padding-bottom: 80px;
+    box-shadow: $boxShadow;
+    .titleBook {
+        width: 100%;
+        p {
+            padding-top: 100px;
+            font-weight: 300;
+            text-align: center;
+            font-size: 48px;
+        }
+    }
+    .areaSelect {
+        margin: 0 auto;
+        margin-top: 100px;
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 20px;
+        row-gap: 10px;
+        .selectDorm,
+        .selectFloor,
+        .selectBranch {
+            margin: 0 8px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            p {
+                font-weight: 400;
+                font-size: 18px;
+                color: $colorOrange - 40;
+                margin-right: 12px;
+            }
+            select {
+                font-weight: 400;
+                font-size: 16px;
+                font-family: 'Kanit', sans-serif;
+                padding: 5px 8px 5px 8px;
+            }
+        }
+        .selectDorm {
+            margin-left: -40px;
+            grid-area: selectTopLeft;
+        }
+        .selectFloor {
+            grid-area: selectTopRight;
+        }
+        .selectBranch {
+            margin-left: -40px;
+            margin-top: 12px;
+            grid-area: selectBottom;
+            align-items: center;
+            p {
+                text-align: right;
+                width: 200px;
+            }
+            select {
+                height: 34px;
+            }
+        }
+    }
+    .areaCard {
+        margin-top: 120px;
+        .dorm {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            row-gap: 80px;
+            column-gap: 80px;
+            .cardRoom {
+                display: grid;
+                grid-template-columns: 280px;
+                grid-template-rows: 48px 60px 220px 40px;
+                background-color: $colorWhite+20;
+                box-shadow: 0px 0px 10px 2px rgba(34, 34, 34, 0.2);
+                border-radius: 28px;
+                text-align: center;
+                .numberRoom {
+                    display: flex;
+                    color: $colorWhite;
+                    background-color: #68413b;
+                    // background: linear-gradient(89.96deg, #410016 3.86%, #d3001c 99.97%);
+                    // background: linear-gradient(89.96deg, #013f79 3.86%, #0d7bbb 99.97%);
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 28px 28px 0 0;
+                    p {
+                        font-size: 22px;
+                        letter-spacing: 4px;
+                    }
+                }
+                .memberRoom {
+                    margin-top: 28px;
+                    display: flex;
+                    justify-content: space-between;
+                    p {
+                        font-weight: 500;
+                        color: $colorOrangeWhite - 120;
+                        margin: 0 28px;
+                    }
+                }
+                .listPerson {
+                    margin-top: 4px;
+                    text-align: left !important;
+                    margin-left: 42px;
+                    .emptyRoom {
+                        margin-left: 62px;
+                        margin-top: 64px;
+                        font-weight: 400;
+                        font-size: 24px;
+                        color: green;
+                    }
+                    li {
+                        list-style: none;
+                        margin-top: 10px;
+                        &::before {
+                            content: "\2022";
+                            color: $colorOrangeWhite;
+                            font-weight: bold;
+                            font-size: 24px;
+                            display: inline-block;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+                .bookBtn {
+                    width: 100%;
+                    border-radius: 0 0 28px 28px;
+                    background: none;
+                    button {
+                        cursor: pointer;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 0 0 28px 28px;
+                        background: none;
+                        border: 0px;
+                        // background: #145081;
+                        background: #444;
+                        transition: 0.2s ease-in-out;
+                        p {
+                            font-family: 'Kanit', sans-serif;
+                            color: white;
+                            font-size: 16px;
+                            font-weight: 400;
+                            transform: scale(1.00, 1.00);
+                        }
+                        &:hover {
+                            background: #111;
+                            // background: #0b3353;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 420px) {
+    .areaSelect {
+        column-gap: 8px !important;
+        row-gap: 2px !important;
+        margin-top: 68px !important;
+        .selectDorm,
+        .selectFloor,
+        .selectBranch {
+            margin: 8px 0 !important;
+            p {
+                margin-left: -80px !important;
+                font-size: 16px !important;
+                text-align: right;
+                width: 120px;
+            }
+            select {
+                font-size: 14px !important;
+                width: 200px !important;
+            }
+        }
+    }
+    .areaCard {
+        margin-top: 80px !important;
+        .dorm {
+            width: 100%;
+            row-gap: 40px !important;
+        }
+    }
+}
+
+@media only screen and (min-width: 420px) and (max-width: 1100px) {
+    .areaBook {
+        .areaSelect {
+            .selectDorm,
+            .selectFloor,
+            .selectBranch {
+                margin: 10px 0 !important;
+                p {
+                    text-align: right;
+                    width: 140px;
+                }
+                select {
+                    width: 400px !important;
+                }
+            }
+        }
+    }
+    .areaCard {
+        margin-top: 80px !important;
+        .dorm {
+            width: 100%;
+            row-gap: 60px !important;
+            column-gap: 40px !important;
+        }
+    }
+}

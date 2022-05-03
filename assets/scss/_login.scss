@@ -1,0 +1,217 @@
+@keyframes animate {
+    0% {
+        opacity: 0.1;
+        top: 54%;
+    }
+    100% {
+        top: 50%;
+        opacity: 1.0;
+    }
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.container_login {
+    background: url("../img/dorm/women_02.webp");
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    font-family: 'Kanit', sans-serif;
+    position: relative;
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .areaLogin {
+        animation-name: animate;
+        animation-duration: 1s;
+        z-index: 2;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(234, 234, 234);
+        border-radius: 10px;
+        padding: 40px;
+        p {
+            font-size: 32px;
+            margin-bottom: 28px;
+        }
+        .input {
+            justify-content: center;
+            align-items: center;
+            display: grid;
+            grid-template-columns: minmax(40px, 1fr);
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: "iconU username" "iconP password";
+            input:nth-child(3),
+            input:nth-child(4) {
+                box-shadow: $boxShadow;
+                font-family: "Kanit", sans-serif;
+                margin: 6px 0;
+                border: none;
+                outline: none;
+                width: 340px;
+                padding: 10px 5px 10px 15px;
+                font-size: 16px;
+            }
+            i:nth-child(1) {
+                grid-area: iconU;
+            }
+            i:nth-child(2) {
+                grid-area: iconP;
+            }
+            input:nth-child(1) {
+                grid-area: username;
+            }
+            input:nth-child(2) {
+                grid-area: password;
+            }
+        }
+        .forgotPassword {
+            text-decoration: underline !important;
+            color: $colorDark;
+            text-decoration: none;
+            font-size: 12px;
+            margin: 10px 0 26px 0;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        .btnLogin {
+            cursor: pointer;
+            font-size: 16px;
+            background: $colorOrangeWhite - 20;
+            color: white;
+            font-family: "Kanit", sans-serif;
+            padding: 8px 40px 8px 40px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 36px;
+            transition: 0.2s;
+            &:hover {
+                background-color: rgb(173, 55, 0);
+            }
+        }
+        .areaLinkRegister {
+            cursor: pointer;
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 40px;
+            background-color: $colorDark + 50;
+            border-radius: 0 0 10px 10px;
+            transition: 0.2s;
+            &:hover {
+                background-color: $colorDark + 20;
+            }
+            .btnLinkRegister {
+                display: flex;
+                margin-top: 12px;
+                font-size: 16px;
+                color: $colorWhite;
+            }
+        }
+    }
+    .adminLogin {
+        animation-name: animate;
+        animation-duration: 3s;
+        z-index: 8;
+        a {
+            opacity: 1;
+            font-size: 14px;
+            text-decoration: none;
+            position: absolute;
+            bottom: 28px;
+            right: 40px;
+            color: $colorWhite;
+            background-color: rgba(0, 0, 0, 0.2);
+            border: 2px solid rgba(255, 60, 0, 0.8);
+            padding: 10px 20px;
+            border-radius: 4px;
+            transition: 0.2s;
+            &:hover {
+                opacity: 1;
+                border: 2px solid rgba(255, 60, 0, 0);
+                background-color: $colorOrange;
+            }
+        }
+    }
+}
+
+.overlayLogin {
+    top: 0;
+    z-index: 1;
+    position: absolute;
+    background-color: rgba(34, 34, 34, 0.2);
+    width: 100%;
+    height: 100vh;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 420px) {
+    .container_login {
+        .areaLogin {
+            border-radius: 10px;
+            padding: 40px;
+            p {
+                font-size: 24px;
+                margin-bottom: 28px;
+            }
+            .input {
+                input:nth-child(3),
+                input:nth-child(4) {
+                    margin: 6px 0;
+                    width: 180px;
+                    padding: 10px 5px 10px 15px;
+                    font-size: 14px;
+                }
+            }
+            .forgotPassword {
+                font-size: 12px;
+                margin: 10px 0 26px 0;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            .btnLogin {
+                font-size: 16px;
+                padding: 8px 40px 8px 40px;
+                border-radius: 5px;
+                margin-bottom: 36px;
+            }
+            .areaLinkRegister {
+                margin-top: 40px;
+                bottom: 0;
+                width: 100%;
+                height: 40px;
+                border-radius: 0 0 10px 10px;
+                .btnLinkRegister {
+                    margin-top: 12px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .adminLogin {
+        a {
+            opacity: 1 !important;
+            font-size: 12px !important;
+            bottom: 6px !important;
+            right: 6px !important;
+            color: $colorWhite !important;
+            background-color: rgba(0, 0, 0, 0.2) !important;
+            border: 2px solid rgba(255, 60, 0, 0.8) !important;
+            padding: 10px 20px !important;
+        }
+    }
+}

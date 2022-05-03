@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Sarabun&display=swap');
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+#sidebar::-webkit-scrollbar {
+    width: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.815);
+    /* border-radius: 10px; */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #222;
+}
+
+@keyframes opacityAnimate {
+    0% {
+        opacity: 0 !important;
+    }
+    100% {
+        opacity: 100 !important;
+    }
+}
+
+html {
+    font-family: 'Prompt', sans-serif;
+}
+
+.font_prompt {
+    font-family: 'Prompt', sans-serif !important;
+}
+
+.font_kanit {
+    font-family: 'Kanit', sans-serif !important;
+}
+
+.font_sarabun {
+    font-family: 'Sarabun', sans-serif !important;
+}
+
+.deactive {
+    display: none !important;
+}
+
+.defocus {
+    user-select: none;
+}
+
+.bg_red_nav {
+    background-color: rgb(110, 20, 20);
+}
+
+.hover_bg_red_nav:hover {
+    background-color: #240404;
+}
+
+/* Area repeat */
+.border_white_light {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+} 
+
+.line_t_white {
+    border-top: 1px solid rgba(255, 255, 255)
+}
+
+.line_t_white_2 {
+    border-top: 1px solid rgba(255, 255, 255, 0.2)
+}
+
+.line_t_white_2 {
+    border-top: 1px solid rgba(255, 255, 255, 0.4)
+}
+
+.line_t_white_5 {
+    border-top: 1px solid rgba(255, 255, 255, 0.5)
+}
+
+.line_t_white_6 {
+    border-top: 1px solid rgba(255, 255, 255, 0.6)
+}
+
+.line_t_white_7 {
+    border-top: 1px solid rgba(255, 255, 255, 0.7)
+}
+
+.line_t_white_8 {
+    border-top: 1px solid rgba(255, 255, 255, 0.8)
+}
+
+.line_t_white_9 {
+    border-top: 1px solid rgba(255, 255, 255, 0.9)
+}
+
+
+.line_b_white {
+    border-bottom: 1px solid rgba(255, 255, 255)
+}
+
+.line_b_white_2 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+}
+
+.line_b_white_3 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4)
+}
+
+.line_b_white_5 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5)
+}
+
+.line_b_white_6 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6)
+}
+
+.line_b_white_7 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7)
+}
+
+.line_b_white_8 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8)
+}
+
+.line_b_white_9 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.9)
+}
+
+
+/* Room_book */
+
+.bg_green {
+    background-color: #008628;
+    /* background-color: #029C50; */
+}
+
+.bg_green:hover {
+    background-color: #00681f;
+    /* background-color: #008040; */
+}
+
+.bg_orange {
+    background-color: #f08a2c;
+}
+
+.bg_orange:hover {
+    background-color: #d6781f;
+}
+
+.bg_red {
+    background-color: #BE0A0A;
+}
+/* 
+.bg_red:hover {
+    background-color: #8a0808;
+} */
+
+
+.bg_card_blue, .bg_card_blue_hv {
+    background-color: #1191a5;
+}
+
+.bg_card_blue_on_hv, .bg_card_blue_hv:hover {
+    transition: 0.3s ease-in-out;
+    background-color: #127483;
+}
+
+
+.bg_card_green, .bg_card_green_hv {
+    background-color: #28a745;
+}
+
+
+.bg_card_green_on_hv, .bg_card_green_hv:hover {
+    transition: 0.3s ease-in-out;
+    background-color: #228d3b;
+}
+
+
+.bg_card_yellow, .bg_card_yellow_hv {
+    background-color: #ffc107;
+}
+
+.bg_card_yellow_on_hv, .bg_card_yellow_hv:hover {
+    transition: 0.3s ease-in-out;
+    background-color: #cf9e0b;
+}
+
+
+.bg_card_red, .bg_card_red_hv {
+    background-color: #dc3545;
+}
+
+.bg_card_red_on_hv, .bg_card_red_hv:hover {
+    transition: 0.3s ease-in-out;
+    background-color: #b62d3a;
+}
+
+
+.bg_card_purple, .bg_card_purple_hv {
+    background-color: rgb(118, 65, 168);
+}
+
+.bg_card_purple_on_hv, .bg_card_purple_hv:hover {
+    background-color: rgb(104, 54, 151);
+}
+
+
+.bg_color_key_1, .bg_color_key_1_hv {
+    background-color: #2c4d85;
+}
+
+.bg_color_key_1_on_hv, .bg_color_key_1_hv:hover {
+    background-color: #214177;
+}
+
+
+.bg_color_key_2, .bg_color_key_2_hv {
+    background-color: rgb(59, 98, 165);
+}
+
+.bg_color_key_2_on_hv, .bg_color_key_2_hv:hover {
+    background-color: rgb(45, 81, 143);
+}
+
+
+.bg_color_key_3, .bg_color_key_3_hv {
+    background-color: rgb(71, 117, 196);
+}
+
+.bg_color_key_3_on_hv, .bg_color_key_3_hv:hover {
+    background-color: rgb(54, 98, 173);
+}
+
+
+.bg_color_key_4, .bg_color_key_4_hv {
+    background-color: rgb(108, 154, 233);
+}
+
+.bg_color_key_4_on_hv, .bg_color_key_4_hv:hover {
+    background-color: rgb(76, 123, 206);
+}
+
+
+
+@media screen and (max-width: 640px)  {
+    .sm_hidden {
+        display: none !important;
+    }
+}
+
+
+@media screen and (max-width: 768px)  {
+    .md_hidden {
+        display: none !important;
+    }
+}
+
+
+@media screen and (max-width: 1024px)  {
+    .lg_hidden {
+        display: none !important;
+    }
+}
+
+
+@media screen and (max-width: 1280px)  {
+    .xl_hidden {
+        display: none !important;
+    }
+}
+
+
+@media screen and (max-width: 1536px)  {
+    .xxl_hidden {
+        display: none !important;
+    }
+}

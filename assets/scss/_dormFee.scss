@@ -1,0 +1,257 @@
+@keyframes animateDormFee {
+    0% {
+        padding-bottom: 20px;
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+// $colorIcon: rgb(104, 55, 9);
+$colorIcon: rgb(102, 32, 15);
+$colorTitle: #805118; // $colorIcon: rgb(136, 18, background-image
+$colorTitle2: linear-gradient(90deg, #855319 - 30, #855319 40%); // $colorIcon: rgb(136, 18, 63);
+body {
+    background-color: $colorWhite - 10 !important;
+}
+
+.container_fee {
+    // min-height: 100vh;
+    .icon {
+        animation-name: animateDormFee;
+        animation-duration: 1s;
+        color: $colorIcon;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+    }
+    #text {
+        text-align: center;
+        align-items: center;
+        border: 1px solid rgba(0, 0, 0, 0.2)
+    }
+    .areaFee {
+        margin: 0 auto;
+        text-align: center;
+        max-width: 900px;
+        .veryTitle {
+            font-size: 34px;
+            letter-spacing: 2px;
+            margin-bottom: 80px;
+        }
+        .room_fee {
+            display: grid;
+            grid-template-columns: 200px 200px 300px;
+            grid-template-rows: 40px 40px 40px 40px;
+            grid-template-areas: 'title title title' 'man women women2' 'manT1 womenT1 women2T1' 'manT1 womenT1 women2T2';
+            justify-content: center;
+            .man,
+            .women,
+            .women2 {
+                font-size: 16px;
+                background: #855319;
+                color: $colorWhite;
+            }
+            .txt {
+                // font-size: 16px;
+                background-color: $colorWhite;
+            }
+            .title {
+                grid-area: title;
+                display: flex;
+                justify-content: center;
+                font-size: 18px;
+                background: $colorTitle - 20;
+                p {
+                    letter-spacing: 1px;
+                    color: white;
+                }
+            }
+            .man {
+                display: flex;
+                justify-content: center;
+                grid-area: man;
+            }
+            .manT1 {
+                grid-area: manT1;
+                display: flex;
+                justify-content: center;
+            }
+            .manT2 {
+                grid-area: manT2;
+                display: flex;
+                justify-content: center;
+            }
+            .women {
+                display: flex;
+                justify-content: center;
+                grid-area: women;
+            }
+            .womenT1 {
+                display: flex;
+                justify-content: center;
+                grid-area: womenT1;
+            }
+            .womenT2 {
+                display: flex;
+                justify-content: center;
+                grid-area: womenT1;
+            }
+            .women2 {
+                display: flex;
+                justify-content: center;
+                grid-area: women2;
+            }
+            .women2T1 {
+                display: flex;
+                justify-content: center;
+                grid-area: women2T1;
+            }
+            .women2T2 {
+                display: flex;
+                justify-content: center;
+                grid-area: women2T2;
+            }
+        }
+    }
+    .insurance,
+    .insuKey,
+    .feeToday {
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns: 120px 580px;
+        grid-template-rows: 40px 40px;
+        grid-template-areas: 'icon title' 'icon text';
+        justify-content: center;
+        .title {
+            letter-spacing: 1px;
+        }
+    }
+    .areaInsurance {
+        margin: 0 auto;
+        margin-bottom: 40px;
+        .icon {
+            grid-area: icon;
+        }
+        .title {
+            grid-area: title;
+            background-image: $colorTitle2;
+            color: white;
+            display: flex;
+            justify-content: center;
+        }
+        .text {
+            grid-area: text;
+            background-color: $colorWhite;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .areaInsuKey {
+        margin: 0 auto;
+        margin-bottom: 40px;
+        .icon {
+            grid-area: icon;
+        }
+        .title {
+            grid-area: title;
+            background-image: $colorTitle2;
+            color: white;
+            display: flex;
+            justify-content: center;
+        }
+        .text {
+            grid-area: text;
+            background-color: $colorWhite;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .areafeeToday {
+        margin: 0 auto;
+        margin-bottom: 40px;
+        .icon {
+            grid-area: icon;
+        }
+        .title {
+            grid-area: title;
+            background-image: $colorTitle2;
+            color: white;
+            display: flex;
+            justify-content: center;
+        }
+        .text {
+            grid-area: text;
+            background-color: $colorWhite;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 420px) {
+    .container_fee {
+        margin-top: 120px !important;
+        .icon {
+            font-size: 50px !important;
+        }
+        .fa-bed {
+            margin-bottom: -12px !important;
+            font-size: 80px !important;
+        }
+        #text {
+            border: 1px solid rgba(0, 0, 0, 0.2) !important;
+        }
+        .areaFee {
+            max-width: 900px !important;
+            .veryTitle {
+                font-size: 24px !important;
+                letter-spacing: 2px !important;
+                margin-bottom: 60px !important;
+            }
+            .icon {
+                margin-bottom: 16px !important;
+            }
+            .room_fee {
+                grid-template-columns: 100px 100px 100px !important;
+                grid-template-rows: 40px 40px 50px 50px !important;
+                .man,
+                .women,
+                .women2 {
+                    font-size: 14px !important;
+                }
+                .title {
+                    font-size: 16px !important;
+                    background: $colorTitle - 20 !important;
+                    p {
+                        letter-spacing: 1px !important;
+                        color: white !important;
+                    }
+                }
+                .txt {
+                    text-align: center;
+                    line-height: 1.4;
+                    font-size: 14px !important;
+                }
+            }
+        }
+        .insurance,
+        .insuKey,
+        .feeToday {
+            margin-top: 60px !important;
+            grid-template-columns: 100px 200px !important;
+            grid-template-rows: 40px 40px !important;
+            .title {
+                letter-spacing: 1px !important;
+                font-size: 14px !important;
+            }
+        }
+        .areaInsurance {
+            margin-bottom: 40px !important;
+        }
+        .areaInsuKey {
+            margin-bottom: 40px !important;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun&display=swap');
+@page {
+    size: A4;
+    size: 21cm 29.7cm;
+    margin: 0;
+}
+
+body {
+    font-family: 'Sarabun', sans-serif;
+    font-size: 16px;
+}
+
+#areaPrint {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    .A4 {
+        width: 995px;
+        // width: 595px;
+        height: 842px;
+    }
+    #page1 {
+        background-color: $colorWhite;
+    }
+    #page2 {
+        background-color: $colorWhite - 20;
+    }
+    .title {
+        margin-top: 40px;
+    }
+}
+
+.areaData {
+    margin-top: 40px;
+}
+
+.line {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+    .text {
+        display: flex;
+        flex-direction: row;
+        margin: 10px 40px;
+    }
+}

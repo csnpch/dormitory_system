@@ -1,0 +1,119 @@
+.container_profile {
+    font-family: 'Prompt', sans-serif;
+    margin: 0 auto;
+    margin-top: 160px;
+    max-width: 1200px;
+    min-height: 80vh;
+    .title {
+        font-size: 42px;
+        font-weight: 300;
+        text-align: center;
+    }
+    .areaDescript {
+        .descript {
+            position: relative;
+            top: 32px;
+            text-align: center;
+            width: 80%;
+            font-size: 13px;
+            color: red - 40;
+            margin: 0 auto;
+        }
+    }
+    .areaProfile {
+        margin: 0 auto;
+        margin-top: 40px;
+        max-width: 80%;
+        background-color: $colorWhite;
+        border-radius: 20px;
+        padding: 60px 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 20px;
+        column-gap: 28px;
+        .data {
+            p {
+                margin-left: 10px;
+                margin-bottom: 8px;
+            }
+            input {
+                cursor: not-allowed;
+                font-family: 'Kanit', sans-serif;
+                padding: 4px 16px;
+            }
+        }
+    }
+    .btn {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: 40px;
+        max-width: 100%;
+        input {
+            cursor: pointer;
+            padding: 8px 24px;
+            border: 0px;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            transition: 0.2s;
+        }
+    }
+    .btnEditData {
+        input {
+            background-color: rgb(201, 92, 29);
+            &:hover {
+                background-color: rgb(155, 69, 19);
+            }
+        }
+    }
+    .btnSaveData {
+        input {
+            background-color: rgb(48, 153, 0);
+            &:hover {
+                background-color: rgb(32, 102, 0);
+            }
+        }
+    }
+    select {
+        font-family: "Kanit", sans-serif;
+        padding: 4px 10px;
+    }
+    .data {
+        .branch {
+            select {
+                width: 280px !important;
+            }
+        }
+    }
+    .areaLogout {
+        position: relative;
+        top: 44px;
+        width: 90%;
+        text-align: right !important;
+        font-size: 17px;
+        .btnLogout {
+            right: 0;
+            color: red - 40;
+        }
+    }
+    .areaDescript2 {
+        .descript2 {
+            position: relative;
+            top: 8px;
+            text-align: right;
+            width: 80%;
+            font-size: 12px;
+            color: red - 20;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 1100px) {
+    .areaLogout {
+        display: none !important;
+    }
+}
