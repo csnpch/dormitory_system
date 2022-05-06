@@ -121,6 +121,9 @@ function checkBoxAll(statusSelect) {
 }
 
 function openLinkDataStd(pathStd) {
+    //! On server
+    // let tmpPathStd = window.location.protocol + '//' + window.location.hostname + '/admin/sub_member_manage.php?dataStd&std_id=';
+    //! Localhost
     let tmpPathStd = window.location.protocol + '//' + window.location.hostname + '/' + window.location.pathname.split('/')[1] + '/' + window.location.pathname.split('/')[2] + '/sub_member_manage.php?dataStd&std_id=';
     for (let i = 0; i < pathStd.length; i++) {
         try {

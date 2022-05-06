@@ -22,6 +22,5 @@
 - autoChangeStatusStd for not created >= 1 year
 
 ## For dev:
-tb_branch insert 1 row default ->
-(branch_id = 0, fac_id = null, branch_name = '-')
-
+tb_branch insert 1 row default -> (branch_id = 0, fac_id = null, branch_name = '-')
+- _adm_book_std_manage.js line 124-127 plz change on deploy!

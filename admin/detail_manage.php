@@ -1,3 +1,22 @@
+<?php 
+
+    session_start();
+    require_once ('./../disable_error_report.php');
+    require_once ('./../classes/Admin.php');
+    $adminClass = new Admin();
+
+    if (!isset($_SESSION['adm_id'])) {
+        header('Location: ../admin/login.php');
+    } else if (isset($_SESSION['adm_id'])) {
+        $statusAdmin = $adminClass->Find('adm_status', 'adm_id', $_SESSION['adm_id']);
+        $statusAdmin = $statusAdmin->fetch(PDO::FETCH_ASSOC);
+        if (intval($statusAdmin['adm_status']) === 2) {
+            header('Location: ../admin/book_manage.php');
+        }
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +33,7 @@
     <div class="w-full h-full">
         <form method="post">
             <div class="flex flex-col tiems-center justify-center">
-                <p class="text-center mt-8 text-2xl">กำหนดค่าธรรมเนียมหอพัก</p>
+                <p class="text-center mt-14 text-2xl">กำหนดค่าธรรมเนียมหอพัก</p>
                 <div class="flex flex-col gap-x-4 items-center justify-center gap-y-2 mt-12">
                     <div class="mb-2">
                         <p class="mb-2 text-lg">หอพักชาย</p>
@@ -69,7 +88,7 @@
         </form>
         <div>
         
-        <a href="./news_manage.php" class="fixed left-6 bottom-6 md:left-20 md:bottom-10 rounded-md mt-8 px-4 py-2 bg-indigo-600 text-white">
+        <a href="./dashboard.php" class="fixed left-6 bottom-6 md:left-20 md:bottom-10 rounded-md mt-8 px-4 py-2 bg-indigo-600 text-white">
             <- กลับ
         </a>
     

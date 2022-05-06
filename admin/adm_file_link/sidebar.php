@@ -64,7 +64,7 @@
                 <span>การจองห้องพัก</span>
             </button>
         </a>
-
+        
         <a href="./../admin/fix_manage.php">
             <button class="menuBtn mb-0.5 rounded-lg ml-3 w-full p-3 hover:bg-gray-700 text-left text-gray-300 hover:text-gray-50">
                 <i class="fas fa-hammer w-6"></i>
@@ -76,6 +76,14 @@
             <button class="menuBtn mb-0.5 rounded-lg ml-3 w-full p-3 hover:bg-gray-700 text-left text-gray-300 hover:text-gray-50">
                 <i class="fas fa-graduation-cap w-6"></i>
                 <span>จัดการคณะ / สาขา</span>
+            </button>
+        </a>
+
+        <a href="./../admin/detail_manage.php">
+            <button class="menuBtn mb-0.5 rounded-lg ml-3 w-full p-3 hover:bg-gray-700 text-left text-gray-300 hover:text-gray-50">
+                <!-- <i class="fas fa-file-alt w-5"></i> -->
+                <i class="fad fa-database w-6"></i>
+                <span>จัดการข้อมูลหน้าเว็บ</span>
             </button>
         </a>
 

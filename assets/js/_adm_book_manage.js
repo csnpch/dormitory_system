@@ -11,13 +11,13 @@ function reportData() {
         return false;
     } else {
         return true;    
-        console.log('status_book', status_book);
-        console.log('array_branch', array_branch);
-        console.log('array_building', array_building);
-        console.log('array_floor', array_floor);
-        console.log('array_room', array_room);
-        console.log('array_areaBook', array_areaBook);
-        console.log('array_book', array_book);
+        // console.log('status_book', status_book);
+        // console.log('array_branch', array_branch);
+        // console.log('array_building', array_building);
+        // console.log('array_floor', array_floor);
+        // console.log('array_room', array_room);
+        // console.log('array_areaBook', array_areaBook);
+        // console.log('array_book', array_book);
     }
 }
 
@@ -84,7 +84,7 @@ function set_selectFloor() {
 
 async function pushMemberDataInRoomBook(dataPersonBookInRoom) {
     strInnerHtml = "";
-    console.log(dataPersonBookInRoom)
+    // console.log(dataPersonBookInRoom)
     for (let r = 0; r < dataPersonBookInRoom.length; r++) {
         strInnerHtml += `
             <a class="hover:underline" target="_blank" href="./sub_member_manage.php?dataStd&std_id=${dataPersonBookInRoom[r].std_id}">

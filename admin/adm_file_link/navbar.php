@@ -24,9 +24,9 @@
             <i class="far fa-eye fa-lg w-6 mr-2"></i>
             เยี่ยมชมเว็บไซค์
         </a>
-        <a href="./detail_manage.php" class="websiteDetailManagerButton deactive mt-0.5 btn btn-active btn-sm rounded-btn">
+        <!-- <a href="./detail_manage.php" class="websiteDetailManagerButton deactive mt-0.5 btn btn-active btn-sm rounded-btn">
             แก้ไขข้อมูลรายละเอียดหน้าเว็บไซค์
-        </a>
+        </a> -->
         <a class="websiteDetailManagerButton flex flex-row justify-center items-center btn btn-ghost btn-sm rounded-btn">
             <div class="mt-0.5 inline-block w-5 mr-2 stroke-current">       
                 <i class="far fa-user-circle text-xl"></i>

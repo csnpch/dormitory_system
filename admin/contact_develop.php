@@ -57,7 +57,7 @@
     </div>
     
     <script type="text/javascript" src="../assets/js/_title_change.js" onload="switchTitle('ติดต่อผู้พัฒนาระบบ')"></script>
-    <script type="text/javascript" src="../assets/js/_adm_select_menu.js" onload="select_menu(9)"></script>
+    <script type="text/javascript" src="../assets/js/_adm_select_menu.js" onload="select_menu(10)"></script>
     <script type="text/javascript" src="../assets/js/_adm_dashboard.js"></script>
 
 </body>
