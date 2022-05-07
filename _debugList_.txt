@@ -1,0 +1,2 @@
+should to do.
+- delete room floor building -> check if empty then delete

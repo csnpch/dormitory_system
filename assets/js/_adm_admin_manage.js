@@ -67,7 +67,7 @@ for (let i = 0; i < document.getElementsByClassName('btn_delete_admin_check').le
             cancelButtonText: 'ยกเลิก'
         }).then((result) => {
             if (result.isConfirmed) {
-                document.getElementsByClassName('btn_delete_admin')[i].click();
+                document.getElementsByClassName('btn_delete_admin')[i+1].click();
             }
         })
     });

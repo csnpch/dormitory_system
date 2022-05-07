@@ -22,6 +22,8 @@
     $statusMain = $statusClass->Find('status_switch', 'status_name', 'system_main');
     $statusMain = $statusMain->fetch(PDO::FETCH_ASSOC);
     
+    $selectFam = $famClass->find('*', 'std_id', $_SESSION['std_id']);
+    
     if (intval($statusMain['status_switch']) === 1) { header('Location: ./maintenance.php'); }
 
     if (isset($_SESSION['std_id'])) {
