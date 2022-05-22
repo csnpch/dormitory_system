@@ -9,6 +9,7 @@
     require_once './classes/Room.php';
     require_once './classes/Book.php';
     require_once './classes/Status.php';
+    require_once './classes/LogBook.php';
 
     $stdClass = new Student();
     $branchClass = new Branch();
@@ -17,6 +18,7 @@
     $roomClass = new Room();
     $bookClass = new Book();
     $statusClass = new Status();
+    $logBookClass = new LogBook();
 
     $statusMain = $statusClass->Find('status_switch', 'status_name', 'system_main');
     $statusMain = $statusMain->fetch(PDO::FETCH_ASSOC);
@@ -341,6 +343,7 @@
     while ($value = $selectBook->fetch(PDO::FETCH_ASSOC)) {
         array_push($array_book, $value);
     }
+    
 
     echo "<script type='text/javascript'>
         setValuesForBook(".json_encode($statusBook).", ".json_encode($array_dataUser).", ".json_encode($array_branch).", ".json_encode($array_building).", ".json_encode($array_floor).", ".json_encode($array_room).", ".json_encode($array_areaBook).", ".json_encode($array_book).");
@@ -356,6 +359,8 @@
         if ($count['RESULT'] < intval($_POST['txt_LimitMember'])) {
             
             if ($stdClass->Update_Select(array('room_id'), array($_POST['txt_idRoom']), 'std_id', $_SESSION['std_id'])) {
+
+                
                 echo "<script>
                     Swal.fire({
                         title: 'จองห้องพักสำเร็จ',
@@ -363,10 +368,18 @@
                         icon: 'success',
                         showConfirmButton: false,
                         showCancelButton: false
-                    }).then(setTimeout(() => {
-                        window.location.href='system_book_report.php';
-                    }, 3000)); 
-                </script>";
+                        }).then(setTimeout(() => {
+                                window.location.href = './system_book.php';
+                            }, 3000)); 
+                        </script>";
+                    
+                    
+                
+                $dataStudent = $stdClass->Find('std_firstname, std_lastname, std_idCard', 'std_id', $_SESSION['std_id']);
+                $dataStudent = $dataStudent->fetch(PDO::FETCH_ASSOC);
+                $dataRoomBook = $logBookClass->findDataToLogBook($_POST['txt_idRoom'])->fetch(PDO::FETCH_ASSOC);
+                $logBookClass->Insert($dataStudent['std_idCard'], $dataStudent['std_firstname'].' '.$dataStudent['std_lastname'], $dataRoomBook['room_name'].', '.$dataRoomBook['floor_name'].', '.$dataRoomBook['building_name']);
+                
             } else {
                 echo "<script>
                     Swal.fire({
