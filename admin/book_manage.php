@@ -9,15 +9,19 @@
     } else if (isset($_SESSION['adm_id'])) {
         $statusAdmin = $adminClass->Find('adm_status', 'adm_id', $_SESSION['adm_id']);
         $statusAdmin = $statusAdmin->fetch(PDO::FETCH_ASSOC);
+        if (intval($statusAdmin['adm_status']) === 2) {
+            header('Location: ../admin/book_manage.php');
+        }
     }
 
-    require_once '../classes/Student.php';
-    require_once '../classes/Branch.php';
-    require_once '../classes/Building.php';
-    require_once '../classes/Floor.php';
-    require_once '../classes/Room.php';
-    require_once '../classes/Book.php';
-    require_once '../classes/Status.php';
+    require_once './../classes/Student.php';
+    require_once './../classes/Branch.php';
+    require_once './../classes/Building.php';
+    require_once './../classes/Floor.php';
+    require_once './../classes/Room.php';
+    require_once './../classes/Book.php';
+    require_once './../classes/Status.php';
+    require_once './../classes/LogBook.php';
 
     $stdClass = new Student();
     $branchClass = new Branch();
@@ -26,6 +30,9 @@
     $roomClass = new Room();
     $bookClass = new Book();
     $statusClass = new Status();
+    $logBookClass = new LogBook();
+
+    $logBookClass->autoDestroyLogBooks(2);
 
 ?>
 <!DOCTYPE html>
@@ -100,7 +107,11 @@
                         </a>
                     <?php endif; ?>
 
-                    <a href="./book_zone_manage.php" class="bg_card_purple_hv text-center text-white p-3 relative bg-white rounded-lg shadow-md transition-all w-full">
+                    <a href="./historyBook.php" class="bg_card_purple_hv text-center text-white p-3 relative bg-white rounded-lg shadow-md transition-all w-full">
+                        <p style="font-size: 1rem;">ดูประวัติการจองห้องพัก</p>
+                    </a>
+
+                    <a href="./book_zone_manage.php" class="bg_color_key_2_hv text-center text-white p-3 relative bg-white rounded-lg shadow-md transition-all w-full">
                         <p style="font-size: 1rem;">จัดสรรห้องพัก</p>
                     </a>
 
