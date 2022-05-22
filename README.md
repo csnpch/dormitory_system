@@ -2,7 +2,7 @@
 **This project is part of a "Computer Programming" course
 
 ## Tools
-1. PHP 8
+1. PHP 8^
 2. SweetAlert2
 3. Javascirpt
 4. DataTalbe
