@@ -1,5 +1,5 @@
 # Student dormitory management website
-**This project is part of a "Computer Programming" course
+**This project is part of a "Computer Programming" course.
 
 ## Tools
 1. PHP 8
@@ -16,10 +16,12 @@
 2. Thanaphoom (Support)
 
 ## System recomment:
+- autoChangeStatusStd for not created >= 1 year
 - autoDestroyStdAll for not update&active >= 7 year
 - autoDestroyStdIsNotRoomId for not update&active >= 5 year 
 - autoDestroyRoomByStd for not update&active >= 4 year
-- autoChangeStatusStd for not created >= 1 year
+- autoDestroyLogBooks >= 2 year
+- autoDestroyNews >= 3 year
 
 ## For dev:
 tb_branch insert 1 row default -> (branch_id = 0, fac_id = null, branch_name = '-')
