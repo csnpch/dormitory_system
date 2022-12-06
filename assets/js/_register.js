@@ -5,10 +5,10 @@ var inputName = [
     ["txt_firstname", "ชื่อจริง"],
     ["txt_firstname", "ชื่อจริง"],
     ["txt_lastname", "นามสกุล"],
-    ["txt_idCard", "เลขประจำตัวประชาชน"],
+    ["txt_idCard", "เลขประจำตัวประชาชน", {check: 'number'}],
     ["txt_nickname", "ชื่อเล่น"],
     ["date_birthday", "วันเกิด"],
-    ["txt_idStd", "รหัสนักศึกษา"],
+    ["txt_idStd", "รหัสนักศึกษา", {check: 'number'}],
     ["txt_tel", "เบอร์โทรศัพท์"],
     ["txt_email", "อีเมลล์"],
     ["txt_home_number", "บ้านเลขที่"],
@@ -54,6 +54,7 @@ var inputName = [
 function checkEmpty() {
     var statusEmpty = true;
     var statusQcPassword = true;
+    var statusIDNotNumber = true;
     var msgShow = "\tคุณยังไม่ได้ให้ข้อมูลดังนี้<br>";
 
     for (let i = 0; i < inputName.length - 9; i++) {
@@ -62,6 +63,16 @@ function checkEmpty() {
                 statusEmpty = false;
                 if (i < inputName.length) msgShow += "  " + inputName[i][1] + "  , ";
         }
+
+        try {
+            if (inputName[i][2].check === 'number') {
+                if (!(/^\d+$/.test(document.forms["form_register"][inputName[i][0]].value))) {
+                    statusIDNotNumber = false;
+                    msgShow += "\nรหัสบัตรประชาชน หรือ รหัสบัตรนักศึกษา ต้องเป็นตัวเลขเท่านั้น";
+                    console.log(msgShow);
+                }
+            }
+        } catch (err) { }
     }
 
     msgShow = msgShow.slice(0, -3);
@@ -89,7 +100,16 @@ function checkEmpty() {
         }, 1000);
     }
 
-    if (!statusEmpty) {
+    if (!statusIDNotNumber) {
+        Swal.fire({
+            title: 'บัตรประชาชน \nหรือบัตรนักศึกษาไม่ถูกต้อง',
+            text: 'เลขบัตรประชาชนหรือเลขบัตรนักศึกษาต้องเป็นตัวเลขเท่านั้น',
+            icon: 'warning',
+            showCancelButton: false,
+            confirmButtonColor: '#d33',
+            confirmButtonText: 'ปิด'
+        })
+    } else if (!statusEmpty) {
         Swal.fire({
             title: 'คุณยังกรอกข้อมูลไม่ครบ',
             html: msgShow,

@@ -253,6 +253,11 @@
             <div class="overlay hidden w-full h-screen fixed bg-black top-0 opacity-20 z-20"></div>
             <div class="space mb-40"></div>
 
+
+            <div class="w-full">
+                <?php include('./adm_file_link/footer.php'); ?>
+            </div>
+
         </div>
 
     </div>

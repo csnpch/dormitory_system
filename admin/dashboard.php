@@ -348,7 +348,7 @@
                 </div>
             </session>
 
-            <div class="space  mb-10 "></div>
+            <div class="space mb-10"></div>
             
             <?php include('./adm_file_link/footer.php'); ?>
 

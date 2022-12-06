@@ -194,7 +194,9 @@
                                                     <?php 
                                                         endif;
                                                     ?>
+                                                        <a target="_blank" href="./book_std_manage.php?building=<?php echo $_GET['dorm_id']; ?>&floor=<?php echo $valueFloor['floor_id']; ?>" class="hover:underline">
                                                             <?php echo $countMember['RESULT'].'/'.$valueRoom['room_member']; ?>
+                                                        </a>
                                                         </span>
                                                     </p>
                                                 </div>
@@ -354,7 +356,7 @@
 
     <?php
 
-        function alertPopup($status, $txt) {
+        function alertPopup($status, $txt = 'เกิดข้อผิดพาด กรุณาติดต่อผู้ดูแลระบบ') {
             switch ($status) {
                 case 1:
                     echo "<script type='text/javascript'>
@@ -377,7 +379,7 @@
                         Swal.fire({
                             position: 'center-center',
                             icon: 'error',
-                            html: 'เกิดข้อผิดพาด กรุณาติดต่อผู้ดูแลระบบ',
+                            html: '".$txt."',
                             showConfirmButton: false,
                             timer: 1000
                         })
@@ -417,10 +419,10 @@
                 alertPopup(0, '');
             }
         } else if (isset($_POST['floor_submit_del'])) {
-            if ($floorClass->Delete($_POST['floor_id_del'])) {
+            if ($floorClass->CheckStdBookedThenDelete($_POST['floor_id_del'])) {
                 alertPopup(1, 'ลบข้อมูลสำเร็จ');
             } else {
-                alertPopup(0, '');
+                alertPopup(0, 'ยังมีคนพักอาศัยอยู่ในชั้นนี้');
             }
         } else if (isset($_POST['room_submit_del'])) {
             if ($roomClass->Delete($_POST['room_id_del'])) {

@@ -75,13 +75,13 @@
             <div id="content" class="bg-white rounded-2xl sm:p-10 pt-10 pb-20 shadow-md transition-all">
 
                 <!-- Data user -->
-                <div class="frm_data">
+                <div class="frm_data w-full">
                     
                     <?php include('./file_link/system_profile_nav.php') ?>
 
                     <form name="frm_data_self" id="form_student" action="" method="POST">
                         <p class="text-center sm:text-left mt-20 sm:ml-4 text-red-900 text-xl defocus">ข้อมูลนักศึกษา</p>
-                        <div class="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 w-full mt-8 gap-x-4 gap-y-4 
+                        <div class="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 w-full mt-8 gap-x-4 gap-y-4 
                                     justify-self-center place-items-center">
                             <div>
                                 <p class="defocus ml-1 mb-1 text-md">คำนำ</p>
@@ -206,7 +206,7 @@
                     <form name="frm_data_family" action="" method="POST">
 
                         <p class="text-center sm:text-left mt-20 sm:ml-2 text-red-900 text-xl defocus">ผู้ปกครองคนที่ 1 &nbsp;:&nbsp; บิดา</p>
-                        <div class="grid sm:grid-cols-2 mt-8 md:grid-cols-3 xl:grid-cols-4 w-full gap-x-4 gap-y-4 
+                        <div class="grid sm:grid-cols-2 mt-8 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 w-full gap-x-4 gap-y-4 
                                     justify-self-center place-items-center">
                             <div>
                                 <p class="defocus ml-1 mb-1 text-md">ชื่อจริง</p>
@@ -244,7 +244,7 @@
                         </div>
 
                         <p class="text-center sm:text-left mt-20 sm:ml-2 text-red-900 text-xl defocus">ผู้ปกครองคนที่ 2 &nbsp;:&nbsp; มารดา</p>
-                        <div class="grid sm:grid-cols-2 mt-8 md:grid-cols-3 xl:grid-cols-4 w-full gap-x-4 gap-y-4 
+                        <div class="grid sm:grid-cols-2 mt-8 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 w-full gap-x-4 gap-y-4 
                                     justify-self-center place-items-center">
                             <div>
                                 <p class="defocus ml-1 mb-1 text-md">ชื่อจริง</p>
@@ -306,7 +306,7 @@
                 <form name="frm_data_family" action="" method="POST">
 
                     <p class="text-center sm:text-left mt-20 sm:ml-2 text-red-900 text-xl defocus">ประวัติการศึกษา</p>
-                    <div class="grid sm:grid-cols-2 mt-8 md:grid-cols-3 xl:grid-cols-4 w-full gap-x-4 gap-y-4 
+                    <div class="grid sm:grid-cols-2 mt-8 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 w-full gap-x-4 gap-y-4 
                                 justify-self-center place-items-center">
                         <div>
                             <p class="defocus ml-1 mb-1 text-md">จบการศึกษาจาก</p>
@@ -334,7 +334,7 @@
                 <!-- Data sos -->
                 <?php if (count($dataFam) > 2): ?>
                     <p class="text-center sm:text-left mt-20 sm:ml-2 text-red-900 text-xl defocus">ผู้ติดต่อฉุกเฉินคนที่ 1</p>
-                    <div class="grid sm:grid-cols-2 mt-8 md:grid-cols-3 xl:grid-cols-4 w-full gap-x-4 gap-y-4 
+                    <div class="grid sm:grid-cols-2 mt-8 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 w-full gap-x-4 gap-y-4 
                                 justify-self-center place-items-center">
                         <div>
                             <p class="defocus ml-1 mb-1 text-md">ชื่อจริง</p>
@@ -370,7 +370,7 @@
                     </div>
 
                     <p class="text-center sm:text-left mt-20 sm:ml-2 text-red-900 text-xl defocus">ผู้ติดต่อฉุกเฉินคนที่ 2</p>
-                    <div class="grid sm:grid-cols-2 mt-8 md:grid-cols-3 xl:grid-cols-4 w-full gap-x-4 gap-y-4 
+                    <div class="grid sm:grid-cols-2 mt-8 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 w-full gap-x-4 gap-y-4 
                                 justify-self-center place-items-center">
                         <div>
                             <p class="defocus ml-1 mb-1 text-md">ชื่อจริง</p>

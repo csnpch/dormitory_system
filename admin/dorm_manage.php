@@ -260,7 +260,10 @@
                 })
             </script>";
         } else if (isset($_POST['confirm_delete_building'])) {
-            if($buildingClass->Delete($_POST['id_building'])) {
+            
+            $resultDel = $buildingClass->CheckStdBookedThenDelete($_POST['id_building']);
+
+            if ($resultDel) {
                 echo "<script type='text/javascript'>
                     Swal.fire({
                         position: 'center-center',
@@ -269,21 +272,29 @@
                         showConfirmButton: false,
                         timer: 1000
                     })
+                    
                     setTimeout(() => {
-                        window.location.href = './dorm_manage.php';
+                        window.location.href='./dorm_manage.php';
                     }, 1000);
+
                 </script>";
             } else {
                 echo "<script type='text/javascript'>
                     Swal.fire({
                         position: 'center-center',
                         icon: 'error',
-                        html: 'เกิดข้อผิดพาด กรุณาติดต่อผู้ดูแลระบบ',
+                        html: 'ลบข้อมูลไม่สำเร็จ, ยังมีคนอาศัยอยู่ในห้องพัก',
                         showConfirmButton: false,
                         timer: 1000
                     })
+                    
+                    setTimeout(() => {
+                        window.location.href='./dorm_manage.php';
+                    }, 1000);
+
                 </script>";
             }
+
         }
     ?>
 

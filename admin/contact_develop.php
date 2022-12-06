@@ -40,10 +40,10 @@
                     <p class="mt-6 text-md text-red-800 text-lg">ช่องทางติดต่อผู้พัฒนาระบบ</p>
                     <i class="fab fa-facebook fa-3x mt-10 text-blue-800"></i>
                     <a target="_blank" href="https://www.fb.com/100007208803749" class="hover:text-indigo-900 flex flex-row gap-x-4  items-center text-xl text-blue-800 pt-4">
-                        <p class="mt-2 hover:underline">Chitsanuphong Chaihong (Ham)</p>
+                        <p class="mt-2 hover:underline">Chitsanuphong C. (Ham)</p>
                     </a>
-                    <a target="_blank" href="https://www.fb.com/100009072478192" class="pb-8 hover:text-indigo-900 flex flex-row gap-x-4  items-center text-xl text-blue-800 p-4">
-                        <p class="hover:underline">Thanaphoom Arunchit &nbsp;(Phoom)</p>
+                    <a target="_blank" href="https://www.fb.com/100009072478192" class="pb-8 hover:text-indigo-900 flex flex-row gap-x-4  items-center text-xl text-blue-800 px-4 py-2">
+                        <p class="hover:underline">Thanaphoom A. &nbsp;(Phoom)</p>
                     </a>
                 </session>
             </div>

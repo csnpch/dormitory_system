@@ -77,7 +77,7 @@
                             onChange="onUpdate()"
                         >
                     </div>
-                    <p class="text-center mt-4 text-blue-800">( หากเปลี่ยนแปลงแล้วข้อมูลเหมือนเดิมให้กด Shift + F5 )</p>
+                    <p class="text-center mt-4 text-blue-800">( หากเปลี่ยนแปลงแล้ว ข้อมูลเหมือนเดิมให้กด Shift + F5 )</p>
                 </div>
                 <textarea class="hidden mx-auto block border-2" id="txt_area_data" name="txt_area_data" id="" cols="30" rows="10"></textarea>
                 <div class="col-span-2 mx-auto">
