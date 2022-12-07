@@ -50,14 +50,19 @@ var inputName = [
     ["txt_road", "ถนน"]
 ];
 
+var lengthCheckList = 9;
 
-function checkEmpty() {
+
+async function checkEmpty() {
     var statusEmpty = true;
     var statusQcPassword = true;
     var statusIDNotNumber = true;
     var msgShow = "\tคุณยังไม่ได้ให้ข้อมูลดังนี้<br>";
 
-    for (let i = 0; i < inputName.length - 9; i++) {
+    await checkStatusFamily();
+    console.log("lengthCheckList", lengthCheckList);
+
+    for (let i = 0; i < inputName.length - lengthCheckList; i++) {
         switch (document.forms["form_register"][inputName[i][0]].value.length) {
             case 0:
                 statusEmpty = false;
@@ -207,12 +212,14 @@ function useDataAfter(status) {
     }
 }
 
-function checkStatusFamily() {
+async function checkStatusFamily() {
     if (document.forms["form_register"]["select_statusParents1"].value == 0 && document.forms["form_register"]["select_statusParents2"].value == 0) {
         document.getElementsByClassName('EmergencyArea')[0].classList.remove('deactive');
         document.getElementsByClassName('EmergencyArea')[1].classList.remove('deactive');
+        lengthCheckList = 3;
     } else {
         document.getElementsByClassName('EmergencyArea')[0].classList.add('deactive');
         document.getElementsByClassName('EmergencyArea')[1].classList.add('deactive');
+        lengthCheckList = 9;
     }
 }

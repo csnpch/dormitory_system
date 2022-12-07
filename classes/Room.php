@@ -72,6 +72,35 @@
             return $update;
         }
 
+
+        public function CheckStdBookedThenDelete($room_id) {
+            $sql = "SELECT COUNT(tb_students.room_id = tb_rooms.room_id) AS RESULT
+                    FROM `tb_rooms`
+                    LEFT JOIN tb_students ON tb_students.room_id = tb_rooms.room_id
+                    WHERE tb_rooms.room_id = ?;
+            ";
+            $delete = $this->db->prepare($sql);
+            $delete->bindParam(1, $room_id, PDO::PARAM_INT);
+            $delete->execute();
+
+            $delete = $delete->fetch(PDO::FETCH_ASSOC);
+            $result = ($delete['RESULT'] > 1) ? 1 : $delete['RESULT'];
+        
+            echo "<script>console.log('$result')</script>";
+            if (!$result) {
+                $result = 0;
+            }
+
+            if (!$result) {
+                $this->Delete($room_id);
+                return 1;
+            } else {
+                return 0;
+            }
+
+        }
+
+
         public function Delete($room_id) {
             $sql = "DELETE FROM $this->table WHERE room_id = ?";
             $delete = $this->db->prepare($sql);

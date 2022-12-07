@@ -304,13 +304,14 @@
 
         setTimeout(() => {
             dataBranchOnJs.fac_id.unshift(0);
-            insertBranchForSelect();
+            // insertBranchForSelect();
         }, 1000);
 
         function insertBranchForSelect() {
             let select_faculty = document.getElementById("select_faculty");
             let select_branch = document.getElementById("select_branch");
-            let tmpInnerHtml = '<option disabled selected>- กรุณาเลือกสาขา -</option>';
+            // let tmpInnerHtml = '<option disabled selected>- กรุณาเลือกสาขา -</option>';
+            let tmpInnerHtml = '';
             for (let i = 0; i < dataBranchOnJs.branch_id.length; i++) {
                 if (dataBranchOnJs.branch_name[i] != "-") {
                     if (parseInt(select_faculty.value) == dataBranchOnJs.fac_id[i]) {
@@ -455,7 +456,7 @@
                     <div class="question">
                         <p>สาขา</p>
                         <select name="select_branch" id="select_branch" >
-                            <option selected disabled value="">- กรุณาเลือกสาขา -</option>
+                            <option selected disabled value="none-select">- กรุณาเลือกสาขา -</option>
                         </select>
                     </div>
                 </div>
@@ -737,13 +738,13 @@
                     
                     <div class="question">
                         <p>เบอร์โทรศัพท์ที่ติดต่อได้</p>
-                        <input name="txt_telEmergency1" type="text" placeholder="เบอร์โทรศัพท์">
+                        <input name="txt_telEmergency1" type="text" placeholder="เบอร์โทรศัพท์" maxlength="10">
                     </div>
                     
                     <div class="question">
                         <p>ผู้ติดต่อฉุกเฉินคนนี้เป็นใคร</p>
                         <div class="question">
-                        <select  name="select_person_is_Emergency1" id="person_is">
+                        <select name="select_person_is_Emergency1" id="person_is">
                             <!-- <option value="0" selected>บิดา</option> -->
                             <!-- <option value="1">มารดา</option> -->
                             <option value="9" selected disabled>โปรดเลือก</option>
@@ -784,18 +785,18 @@
                     </div>
                     
                     <div class="question">
-                        <p>ชื่อจริง</p>
+                        <p>ชื่อจริง (ไม่มีใส่ - )</p>
                         <input name="txt_firstnameEmergency2" type="text" placeholder="ชื่อผู้ติดต่อฉุกเฉิน">
                     </div>
                     
                     <div class="question">
-                        <p>นามสกุล</p>
+                        <p>นามสกุล (ไม่มีใส่ - )</p>
                         <input name="txt_lastnameEmergency2" type="text" placeholder="นามสกุล">
                     </div>
                     
                     <div class="question">
-                        <p>เบอร์โทรศัพท์ที่ติดต่อได้</p>
-                        <input name="txt_telEmergency2" type="text" placeholder="เบอร์โทรศัพท์">
+                        <p>เบอร์โทรศัพท์ที่ติดต่อได้ (ไม่มีใส่ - )</p>
+                        <input name="txt_telEmergency2" type="text" placeholder="เบอร์โทรศัพท์" maxlength="10">
                     </div>
                     
                     <div class="question">
@@ -803,7 +804,7 @@
                         <select name="select_person_is_Emergency2" id="select_person_is_Emergency2">
                             <!-- <option value="0">บิดา</option> -->
                             <!-- <option value="1" selected>มารดา</option> -->
-                            <option value="9" selected disabled>โปรดเลือก</option>
+                            <option value="9" disabled>โปรดเลือก</option>
                             <option value="2">ปู่</option>
                             <option value="3">ย่า</option>
                             <option value="4">ตา</option>
@@ -811,7 +812,7 @@
                             <option value="6">ลุง</option>
                             <option value="7">ป้า</option>
                             <option value="8">พี่</option>
-                            <option value="9">อื่น ๆ ระบุในเอกสาร</option>
+                            <option value="9" selected>อื่น ๆ ระบุในเอกสาร</option>
                         </select>
                     </div>
                 </div>
