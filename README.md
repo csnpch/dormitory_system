@@ -12,8 +12,8 @@
 8. jsToExcel
 
 ## Creators
-1. SamaHam
-2. Thanaphoom (Support)
+1. Chitsanuphong
+2. Thanaphoom       (Consultant)
 
 ## System recomment:
 - autoChangeStatusStd for not created >= 1 year
