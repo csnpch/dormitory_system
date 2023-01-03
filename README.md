@@ -1,5 +1,5 @@
 # Student dormitory management website
-**This project is part of a "Computer Programming" course and Charity project for student dormitory Increase convenience for students to use the booking website.
+**This project is part of a "Web Programming" course and Charity project for student dormitory Increase convenience for students to use the booking website.
 
 ## Tools
 1. PHP 8
