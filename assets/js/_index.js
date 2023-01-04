@@ -3,11 +3,11 @@ setTimeout(() => {
     document.getElementById('indexPage').classList.remove('deactive');
     document.getElementById('container_navbar').classList.remove('deactive');
 }, 1000);
-setTimeout(() => { document.getElementById('logoLoading').classList.add('-top-full'); }, 2000);
+setTimeout(() => { document.getElementById('logoLoading').classList.add('-top-full'); }, 1000);
 setTimeout(() => {
     document.getElementsByClassName('overflow-hidden')[0].classList.remove('overflow-hidden');
     document.getElementById('logoLoading').style.display = 'none';
-}, 2800);
+}, 1800);
 
 let indexImageSlide = 0;
 let images = [];
