@@ -9,9 +9,9 @@
     } else if (isset($_SESSION['adm_id'])) {
         $statusAdmin = $adminClass->Find('adm_status', 'adm_id', $_SESSION['adm_id']);
         $statusAdmin = $statusAdmin->fetch(PDO::FETCH_ASSOC);
-        if (intval($statusAdmin['adm_status']) === 2) {
-            header('Location: ../admin/book_manage.php');
-        }
+        // if (intval($statusAdmin['adm_status']) === 2) {
+            // header('Location: ./book_manage.php');
+        // }
     }
 
     require_once './../classes/Student.php';

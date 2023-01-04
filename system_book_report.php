@@ -311,7 +311,7 @@
         
     </div>
 
-    <form action="#" method="POST" class="">
+    <form action="#" method="POST" class="hidden">
         <input id="toggleStatus" name="toggleStatus" type="submit">
 
         <?php 

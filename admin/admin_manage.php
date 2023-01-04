@@ -1,6 +1,6 @@
 <?php 
     session_start(); 
-    // require_once ('./../disable_error_report.php');
+    require_once ('./../disable_error_report.php');
     require_once ('./../classes/Admin.php');
     require_once ('./../classes/Encode.php');
     $adminClass = new Admin();
